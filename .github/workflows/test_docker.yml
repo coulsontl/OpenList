@@ -23,7 +23,7 @@ env:
   IMAGE_PUSH: ${{ github.event_name == 'push' }}
   IMAGE_TAGS_BETA: |
     type=ref,event=pr
-    type=raw,value=beta,enable={{is_default_branch}}
+    type=raw,value=beta,enable=true
 
 jobs:
   build_binary:
